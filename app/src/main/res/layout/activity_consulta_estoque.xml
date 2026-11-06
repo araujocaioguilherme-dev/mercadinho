@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F7FA">
+
+    <!-- CABEÇALHO -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:background="#0C437F">
+
+        <Button
+            android:id="@+id/btnVoltarEstoque"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Voltar"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#195EAA"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:text="Estoque"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+
+    <!-- CONTEÚDO -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Consultar produtos"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#17365D"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- CAMPO DE PESQUISA -->
+
+        <EditText
+            android:id="@+id/edtBuscaEstoque"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="Nome ou código de barras"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:backgroundTint="#1266CE"/>
+
+        <!-- BOTÕES DE PESQUISA -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <Button
+                android:id="@+id/btnBuscarEstoque"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:text="Buscar"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#1266CE"/>
+
+            <Button
+                android:id="@+id/btnAtualizarEstoque"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="Atualizar"
+                android:textColor="#17365D"
+                android:backgroundTint="#E4EAF3"/>
+
+        </LinearLayout>
+
+        <!-- CONTADOR DE PRODUTOS -->
+
+        <TextView
+            android:id="@+id/txtTotalProdutos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="12dp"
+            android:text="Produtos cadastrados: 0"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#17365D"/>
+
+        <!-- MENSAGEM INICIAL -->
+
+        <TextView
+            android:id="@+id/txtMensagemEstoque"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Os produtos cadastrados aparecerão aqui."
+            android:textSize="14sp"
+            android:textColor="#777777"
+            android:gravity="center"
+            android:padding="16dp"/>
+
+        <!-- LISTA DE PRODUTOS -->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/containerProdutosEstoque"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+        </ScrollView>
+
+        <!-- BOTÃO CADASTRAR PRODUTO -->
+
+        <Button
+            android:id="@+id/btnCadastrarProduto"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="12dp"
+            android:text="Cadastrar novo produto"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:backgroundTint="#16975E"/>
+
+    </LinearLayout>
+
+</LinearLayout>

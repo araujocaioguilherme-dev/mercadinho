@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#F4F7FC" android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:background="@drawable/bg_azul_cabecalho" android:paddingTop="28dp" android:paddingBottom="26dp" android:paddingStart="22dp" android:paddingEnd="16dp">
+        <ImageView android:layout_width="42dp" android:layout_height="42dp" android:src="@drawable/ic_loja" android:contentDescription="Loja"/>
+        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:orientation="vertical">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Mercadinho do Bairro" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="21sp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Bom dia! ☀️" android:textColor="#E8F3FE" android:textSize="14sp" android:layout_marginTop="3dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true" android:clipToPadding="false">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:orientation="vertical">
+            <LinearLayout android:id="@+id/btnNovaVenda" android:layout_width="match_parent" android:layout_height="140dp" android:orientation="vertical" android:padding="19dp" android:background="@drawable/bg_nova_venda" android:clickable="true" android:focusable="true">
+                <ImageView android:layout_width="42dp" android:layout_height="42dp" android:src="@drawable/ic_carrinho" android:contentDescription="Nova venda"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Nova Venda  ›" android:layout_marginTop="6dp" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="24sp"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Registrar uma venda" android:textColor="#E5F3FF" android:textSize="14sp"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="142dp" android:layout_marginTop="12dp" android:orientation="horizontal">
+                <LinearLayout android:id="@+id/btnEstoque" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:background="@drawable/bg_estoque" android:padding="16dp" android:orientation="vertical" android:clickable="true" android:focusable="true">
+                    <ImageView android:layout_width="34dp" android:layout_height="34dp" android:src="@drawable/ic_caixa" android:contentDescription="Estoque"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="11dp" android:text="Estoque  ›" android:textColor="#FFFFFF" android:textSize="19sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Ver produtos e quantidades" android:textColor="#EBFFF3" android:textSize="12sp"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/btnFiado" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:layout_marginStart="10dp" android:background="@drawable/bg_fiado" android:padding="16dp" android:orientation="vertical" android:clickable="true" android:focusable="true">
+                    <ImageView android:layout_width="34dp" android:layout_height="34dp" android:src="@drawable/ic_lista" android:contentDescription="Fiado"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="11dp" android:text="Fiado  ›" android:textColor="#FFFFFF" android:textSize="19sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Clientes e pendências" android:textColor="#FFF4EF" android:textSize="12sp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/btnMovimento" android:layout_width="match_parent" android:layout_height="111dp" android:layout_marginTop="12dp" android:background="@drawable/bg_movimento" android:gravity="center_vertical" android:padding="18dp" android:orientation="horizontal" android:clickable="true" android:focusable="true">
+                <ImageView android:layout_width="45dp" android:layout_height="45dp" android:src="@drawable/ic_grafico" android:contentDescription="Movimento"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Movimento  ›" android:textSize="21sp" android:textColor="#FFFFFF" android:textStyle="bold"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Vendas do dia, recebimentos e fechamento" android:textSize="12sp" android:textColor="#F0EAFF"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@drawable/bg_rodape"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <LinearLayout android:id="@+id/navInicio" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical">
+            <ImageView android:layout_width="23dp" android:layout_height="23dp" android:src="@drawable/ic_casa" app:tint="#086FCB" android:contentDescription="Início"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Início" android:textColor="#086FCB" android:textSize="11sp"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/navVenda" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical">
+            <ImageView android:layout_width="23dp" android:layout_height="23dp" android:src="@drawable/ic_carrinho" app:tint="#788AA1" android:contentDescription="Venda"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Venda" android:textColor="#788AA1" android:textSize="11sp"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/navEstoque" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical">
+            <ImageView android:layout_width="23dp" android:layout_height="23dp" android:src="@drawable/ic_caixa" app:tint="#788AA1" android:contentDescription="Estoque"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Estoque" android:textColor="#788AA1" android:textSize="11sp"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/navMais" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical">
+            <ImageView android:layout_width="23dp" android:layout_height="23dp" android:src="@drawable/ic_maisop" app:tint="#788AA1" android:contentDescription="Mais"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Mais" android:textColor="#788AA1" android:textSize="11sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

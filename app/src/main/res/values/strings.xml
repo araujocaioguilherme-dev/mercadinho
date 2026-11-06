@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">mercadinho</string>
+    <string name="titulo_cadastro_clientes">Cadastro de clientes</string>
+    <string name="titulo_lista_clientes">Clientes cadastrados</string>
+    <string name="hint_nome_cliente">Nome do cliente</string>
+    <string name="hint_telefone_cliente">Telefone (opcional)</string>
+    <string name="btn_salvar_cliente">Salvar cliente</string>
+    <string name="titulo_fiados_cliente">Fiados do cliente</string>
+    <string name="nome_cliente_fiado">Nome do cliente</string>
+    <string name="rotulo_saldo_fiados">Saldo total em aberto</string>
+    <string name="saldo_inicial_fiados">R$ 0,00</string>
+    <string name="titulo_compras_fiadas">Compras fiadas</string>
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Valor do pagamento (R$)"
+        android:textSize="16sp"
+        android:labelFor="@id/edtValorPagamentoFiado"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/edtValorPagamentoFiado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:hint="Ex.: 50,00"
+        android:inputType="numberDecimal"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Forma de pagamento"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/grupoPagamentoFiado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:checkedButton="@id/radioFiadoDinheiro">
+
+        <RadioButton
+            android:id="@+id/radioFiadoDinheiro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Dinheiro"/>
+
+        <RadioButton
+            android:id="@+id/radioFiadoPix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Pix"/>
+
+        <RadioButton
+            android:id="@+id/radioFiadoCartao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Cartão"/>
+
+    </RadioGroup>
+
+</LinearLayout>

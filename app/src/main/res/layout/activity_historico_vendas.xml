@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F7FA">
+
+    <!-- CABEÇALHO -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:text="Histórico de vendas"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:background="#0C437F"/>
+
+    <!-- RESUMO -->
+
+    <TextView
+        android:id="@+id/txtTotalVendas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Total de vendas: 0"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="#17365D"/>
+
+    <TextView
+        android:id="@+id/txtValorTotalVendas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Valor vendido: R$ 0,00"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#087B46"/>
+
+    <!-- ATUALIZAR -->
+
+    <Button
+        android:id="@+id/btnAtualizarVendas"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_margin="16dp"
+        android:text="Atualizar histórico"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#0C437F"/>
+
+    <!-- MENSAGEM QUANDO NÃO HOUVER VENDAS -->
+
+    <TextView
+        android:id="@+id/txtVendasVazio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:gravity="center"
+        android:text="Nenhuma venda registrada."
+        android:textSize="16sp"
+        android:textColor="#526173"/>
+
+    <!-- LISTA DE VENDAS -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/containerHistoricoVendas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"/>
+
+    </ScrollView>
+
+    <!-- VOLTAR -->
+
+    <Button
+        android:id="@+id/btnVoltarHistoricoVendas"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_margin="16dp"
+        android:text="Voltar"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#0C437F"/>
+
+</LinearLayout>

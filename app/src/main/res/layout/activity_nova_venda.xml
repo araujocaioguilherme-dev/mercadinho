@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F7FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- CABEÇALHO -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:text="Nova venda"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:background="#0C437F"/>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- LEITOR DE CÓDIGO DE BARRAS -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Leitor de código de barras"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#17365D"/>
+
+            <androidx.camera.view.PreviewView
+                android:id="@+id/viewFinderVenda"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:background="#E2E8F0"
+                android:importantForAccessibility="no"/>
+
+            <TextView
+                android:id="@+id/txtStatusScannerVenda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Aguardando leitura do código de barras"
+                android:textColor="#526173"
+                android:textSize="14sp"/>
+
+            <!-- BUSCA MANUAL -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Código de barras"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#17365D"
+                android:labelFor="@id/edtCodigoVenda"/>
+
+            <EditText
+                android:id="@+id/edtCodigoVenda"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Digite ou escaneie o código"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="#17365D"
+                android:textColorHint="#526173"/>
+
+            <Button
+                android:id="@+id/btnBuscarProdutoVenda"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="10dp"
+                android:text="Buscar produto"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#0C437F"/>
+
+            <!-- PRODUTO SELECIONADO -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Produto selecionado"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#17365D"/>
+
+            <TextView
+                android:id="@+id/txtProdutoVenda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:text="Nenhum produto selecionado"
+                android:textColor="#17365D"
+                android:background="#E8EDF5"/>
+
+            <TextView
+                android:id="@+id/txtPrecoVenda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:padding="12dp"
+                android:text="Preço: R$ 0,00"
+                android:textColor="#17365D"
+                android:background="#E8EDF5"/>
+
+            <TextView
+                android:id="@+id/txtEstoqueVenda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:padding="12dp"
+                android:text="Estoque disponível: --"
+                android:textColor="#17365D"
+                android:background="#E8EDF5"/>
+
+            <!-- QUANTIDADE -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Quantidade"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#17365D"
+                android:labelFor="@id/edtQuantidadeVenda"/>
+
+            <EditText
+                android:id="@+id/edtQuantidadeVenda"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:text="1"
+                android:textColor="#17365D"/>
+
+            <!-- ADICIONAR AO CARRINHO -->
+
+            <Button
+                android:id="@+id/btnAdicionarCarrinho"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+                android:text="Adicionar ao carrinho"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#087B46"/>
+
+            <!-- CARRINHO DE COMPRAS -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="Carrinho de compras"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#17365D"/>
+
+            <TextView
+                android:id="@+id/txtCarrinhoVazio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:text="Nenhum produto adicionado"
+                android:textColor="#526173"/>
+
+            <LinearLayout
+                android:id="@+id/containerItensVenda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+            <!-- TOTAL DA VENDA -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Total da venda"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#17365D"/>
+
+            <TextView
+                android:id="@+id/txtTotalVenda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:gravity="end"
+                android:text="R$ 0,00"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#087B46"/>
+            <!-- FORMAS DE PAGAMENTO -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Forma de pagamento"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#17365D"/>
+
+            <RadioGroup
+                android:id="@+id/grupoFormaPagamento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:checkedButton="@id/radioPagamentoDinheiro">
+
+                <RadioButton
+                    android:id="@+id/radioPagamentoDinheiro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dinheiro"
+                    android:textColor="#17365D"
+                    android:buttonTint="#087B46"/>
+
+                <RadioButton
+                    android:id="@+id/radioPagamentoPix"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pix"
+                    android:textColor="#17365D"
+                    android:buttonTint="#087B46"/>
+
+                <RadioButton
+                    android:id="@+id/radioPagamentoCartao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cartão"
+                    android:textColor="#17365D"
+                    android:buttonTint="#087B46"/>
+                <RadioButton
+                    android:id="@+id/radioPagamentoFiado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="Fiado" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btnSelecionarClienteFiado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:layout_marginTop="12dp"
+                android:text="Selecionar cliente para fiado"
+                android:visibility="gone" />
+
+            <!-- VALOR RECEBIDO EM DINHEIRO -->
+
+            <LinearLayout
+                android:id="@+id/containerPagamentoDinheiro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Valor recebido (R$)"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#17365D"
+                    android:labelFor="@id/edtValorRecebido"/>
+
+                <EditText
+                    android:id="@+id/edtValorRecebido"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Ex.: 50,00"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:textColor="#17365D"
+                    android:textColorHint="#526173"/>
+
+                <TextView
+                    android:id="@+id/txtTrocoVenda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:padding="12dp"
+                    android:text="Troco: R$ 0,00"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#087B46"
+                    android:background="#E8EDF5"/>
+
+            </LinearLayout>
+            <!-- FINALIZAR VENDA -->
+
+            <Button
+                android:id="@+id/btnFinalizarVenda"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="20dp"
+                android:text="Finalizar venda"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#087B46"/>
+            <!-- HISTÓRICO DE VENDAS -->
+
+            <Button
+                android:id="@+id/btnHistoricoVendas"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="12dp"
+                android:text="Ver histórico de vendas"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#0C437F"/>
+            <!-- CANCELAR -->
+
+            <Button
+                android:id="@+id/btnCancelarVenda"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="8dp"
+                android:text="Cancelar"
+                android:textColor="#17365D"
+                android:backgroundTint="#E3E7EE"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

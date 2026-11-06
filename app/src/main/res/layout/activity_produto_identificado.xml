@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="#F4F7FC" android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="72dp" android:gravity="center_vertical" android:background="@drawable/bg_azul_cabecalho" android:paddingStart="18dp" android:paddingEnd="18dp" android:orientation="horizontal">
+        <ImageView android:id="@+id/btnVoltarProduto" android:layout_width="27dp" android:layout_height="27dp" android:src="@drawable/ic_voltar" android:contentDescription="Voltar"/>
+        <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginStart="14dp" android:text="Nova Venda" android:textColor="#FFFFFF" android:textSize="20sp" android:textStyle="bold"/>
+        <ImageView android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/ic_carrinho" android:contentDescription="Carrinho"/>
+    </LinearLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="15dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="110dp" android:gravity="center_vertical" android:background="@drawable/bg_cartao" android:padding="16dp" android:orientation="horizontal">
+                <ImageView android:layout_width="69dp" android:layout_height="69dp" android:padding="12dp" android:background="@drawable/bg_botao_azul_claro" android:src="@drawable/ic_caixa" app:tint="#1765B8" android:contentDescription="Produto identificado"/>
+                <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginStart="14dp" android:orientation="vertical">
+                    <TextView android:id="@+id/txtNomeProdutoVenda" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Coca-Cola 2 L" android:textColor="#111F38" android:textStyle="bold" android:textSize="18sp"/>
+                    <TextView android:id="@+id/txtPrecoUnitarioVenda" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:text="R$ 9,50" android:textColor="#15243D" android:textStyle="bold" android:textSize="17sp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:padding="14dp" android:orientation="vertical" android:background="@drawable/bg_cartao">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Quantidade" android:textColor="#1D2B43" android:textSize="15sp" android:textStyle="bold"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="53dp" android:layout_marginTop="10dp" android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:id="@+id/btnDiminuirQuantidade" android:layout_width="55dp" android:layout_height="49dp" android:background="@drawable/bg_botao_menos" android:gravity="center" android:text="−" android:textSize="27sp" android:textStyle="bold" android:textColor="#172A47"/>
+                    <TextView android:id="@+id/txtQuantidadeVenda" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:gravity="center" android:text="1" android:textColor="#141F31" android:textStyle="bold" android:textSize="22sp"/>
+                    <TextView android:id="@+id/btnAumentarQuantidade" android:layout_width="55dp" android:layout_height="49dp" android:background="@drawable/bg_botao_mais" android:gravity="center" android:text="+" android:textSize="26sp" android:textStyle="bold" android:textColor="#154731"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="92dp" android:layout_marginTop="12dp" android:background="@drawable/bg_painel_total" android:padding="15dp" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Subtotal" android:textSize="14sp" android:textColor="#203A31" android:textStyle="bold"/>
+                    <TextView android:id="@+id/txtSubtotalVenda" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="end" android:layout_marginTop="6dp" android:text="R$ 9,50" android:textColor="#0A1915" android:textSize="21sp" android:textStyle="bold"/>
+                </LinearLayout>
+                <Button android:id="@+id/btnAdicionarVenda" android:layout_width="match_parent" android:layout_height="57dp" android:layout_marginTop="17dp" android:background="@drawable/bg_botao_verde" android:backgroundTint="@null" android:text="Adicionar à venda" android:textColor="#FFFFFF" android:textAllCaps="false" android:textStyle="bold" android:textSize="16sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@drawable/bg_rodape"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <LinearLayout android:id="@+id/navInicio" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical">
+            <ImageView android:layout_width="23dp" android:layout_height="23dp" android:src="@drawable/ic_casa" app:tint="#788AA1" android:contentDescription="Início"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Início" android:textColor="#788AA1" android:textSize="11sp"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/navVenda" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical">
+            <ImageView android:layout_width="23dp" android:layout_height="23dp" android:src="@drawable/ic_carrinho" app:tint="#086FCB" android:contentDescription="Venda"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Venda" android:textColor="#086FCB" android:textSize="11sp"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/navEstoque" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical">
+            <ImageView android:layout_width="23dp" android:layout_height="23dp" android:src="@drawable/ic_caixa" app:tint="#788AA1" android:contentDescription="Estoque"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Estoque" android:textColor="#788AA1" android:textSize="11sp"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/navMais" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical">
+            <ImageView android:layout_width="23dp" android:layout_height="23dp" android:src="@drawable/ic_maisop" app:tint="#788AA1" android:contentDescription="Mais"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Mais" android:textColor="#788AA1" android:textSize="11sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
